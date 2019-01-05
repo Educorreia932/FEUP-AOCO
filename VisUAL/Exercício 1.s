@@ -1,10 +1,10 @@
 seqA		DCD		3, - 5,21,2, - 10,50,9 ; sequência
-tseqA	DCD		7 ; tamanho da sequência
+tseqA		DCD		7 ; tamanho da sequência
 		
 		ldr		R0, =tseqA ; carrega endereço do número de elementos
 		ldr		R0, [R0] ; coloca o número de elementos em R0
 		ldr		R1, =seqA ; carrega endereço do primeiro elemento
-ciclo	cmp		R0, #0 ; verifica se chegou ao final
+ciclo		cmp		R0, #0 ; verifica se chegou ao final
 		beq		fim ; termina
 		ldr		R2, [R1] ; carrega elemento atual
 		lsl		R2, R2, #1 ; multiplica por 2
