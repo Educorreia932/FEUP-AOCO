@@ -11,10 +11,10 @@ Aux			DCD		0x7F800000, 0x007FFFFF, 0x7FFFFFFF
 			
 			END
 			
-sinal		lsr		R1, R0, #31
+sinal			lsr		R1, R0, #31
 			mov		PC, LR
 			
-expoentereal	ldr		R1, =Aux
+expoentereal		ldr		R1, =Aux
 			ldr		R1,[R1]
 			and		R0, R0, R1
 			lsr		R0, R0, #23
