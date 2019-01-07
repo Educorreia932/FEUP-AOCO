@@ -1,6 +1,6 @@
-NumA			EQU		0x40900000
-NumB			EQU		0xc0700000
-Aux			DCD		0x7F800000, 0x007FFFFF, 0x7FFFFFFF
+NumA			EQU		0x420c0000
+NumB			EQU		0x42040000
+Aux			DCD		0x7F800000, 0x007FFFFF, 0x80000000
 			
 			ldr		R0, =NumA
 			ldr		R1, =NumB
@@ -9,6 +9,7 @@ Aux			DCD		0x7F800000, 0x007FFFFF, 0x7FFFFFFF
 			bl		difexpoentes
 			bl		mantissas
 			bl		alinhar
+			bl		expoentefinal
 			bl		sinal
 			bl		operacao
 			bl		normalizar
@@ -50,8 +51,17 @@ alinhar		cmp		R2, R3
 			lsrhi	R6, R6, R4
 			mov		PC, LR
 			
-sinal		lsl		R7,	R0, #1
-			lsl		R8,	R1, #1
+expoentefinal	cmp		R2, R3
+			movhs	R4, R2
+			movlo	R4, R3
+			mov		PC, LR
+			
+sinal		ldr		R7, =Aux
+			ldr		R7, [R7, #8]
+			and		R7, R7, R0
+			ldr		R8, =Aux
+			ldr		R8, [R8, #8]
+			and		R8, R8, R0
 			mov		PC, LR
 			
 operacao		cmp		R7, R8
@@ -66,9 +76,19 @@ subtracao		cmp		R5, R6
 			sublo	R11, R6, R5
 			mov		PC, LR
 			
-normalizar	
-			mov		PC, LR
+normalizar	ldr		R10, =Aux
+			ldr		R10, [R10, #4]
+			and		R10, R10, R11
+			cmp		R10, R11
+			beq		normalizado
+			addne	R9, R9, #1
+			lsr		R11, R11, #1
+			add		R4, R4, #1
+			b		normalizar
+normalizado	mov		PC, LR
 			
-resultado		mov		PC, LR
+resultado		add		R12, R11, R4
+			add		R12, R12, R7
+			mov		PC, LR
 			
 fim			END
