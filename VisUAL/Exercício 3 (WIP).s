@@ -41,6 +41,7 @@ difexpoentes	cmp		R2, R3
 mantissas		ldr		R5, =Aux
 			ldr		R5, [R5, #4]
 			and		R5, R5, R0
+		
 			ldr		R6, =Aux
 			ldr		R6, [R6, #4]
 			and		R6, R6, R1
