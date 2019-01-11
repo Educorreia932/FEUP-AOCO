@@ -1,0 +1,13 @@
+R0 - NumA
+R1 - NumB
+R2 - ExpoenteA
+R3 - ExpoenteB
+R4 - Diferença expoentes -> Expoente resultado
+R5 - MantissaA 
+R6 - MantissaB
+R7 - SinalA
+R8- SinalB
+R9 - Número de casas a normalizar (counter)
+R10 - Mantissa normalizada 
+R11 - Mantissa resultado
+R12 - Resultado []
