@@ -11,11 +11,11 @@
 <div align=center>
     <table>
         <tr>
-            <td align=center>Webpage</td>
-            <td align=center>Course</td>
-            <td align=center>Year</td>
-            <td align=center>Semester</td>
-            <td align=center>Academic Year</td>
+            <th align=center>Webpage</th>
+            <th align=center>Course</th>
+            <th align=center>Year</th>
+            <th align=center>Semester</th>
+            <th align=center>Academic Year</th>
         </tr>
         <tr>
             <td align=center>
