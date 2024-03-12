@@ -9,25 +9,25 @@
 ## Information 📌
 
 <div align=center>
-    <table style="text-align: center">
+    <table>
         <tr>
-            <td>Webpage</td>
-            <td>Course</td>
-            <td>Year</td>
-            <td>Semester</td>
-            <td>Academic Year</td>
+            <td align=center>Webpage</td>
+            <td align=center>Course</td>
+            <td align=center>Year</td>
+            <td align=center>Semester</td>
+            <td align=center>Academic Year</td>
         </tr>
         <tr>
-            <td>
+            <td align=center>
             <a href=https://sigarra.up.pt/feup/en/UCURR_GERAL.FICHA_UC_VIEW?pv_ocorrencia_id=419985>🔗</a>
             </td>
-            <td>
+            <td align=center>
             <a href=https://sigarra.up.pt/feup/en/CUR_GERAL.CUR_VIEW?pv_ano_lectivo=2016&pv_curso_id=742>MIEIC</a>
             </td>
             </td>
-            <td>1<sup>st</sup></td>
-            <td>1<sup>st</sup></td>
-            <td>2018/2019</td>
+            <td align=center>1<sup>st</sup></td>
+            <td align=center>1<sup>st</sup></td>
+            <td align=center>2018/2019</td>
         </tr>
     </table>
 </div>
